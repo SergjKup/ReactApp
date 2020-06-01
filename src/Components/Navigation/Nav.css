@@ -1,0 +1,56 @@
+.nav {
+    background-color: #333;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 7vh;
+}
+
+.nav-icon {
+    color: white;
+    margin-left: 5px;
+}
+
+.nav-icon>span>a {
+    color: white;
+    font-size: 2rem;
+}
+
+#nav_search--form {
+    width: 100%;
+    transition: all 500ms;
+}
+
+#nav_search--form>input {
+    width: 75%;
+    height: 2rem;
+    border-radius: 5px;
+    border: none;
+}
+
+#nav_search--form>a>button {
+    width: 25%;
+    height: 2rem;
+    border-radius: 5px;
+    border-radius: 30px;
+    position: relative;
+    left: -40px;
+    cursor: pointer;
+}
+
+.nav-home {
+    font-size: 2rem;
+    margin-right: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-home span>a {
+    color: white;
+}
+
+.nav-home>span:last-child {
+    margin-left: 10px;
+}

@@ -1,0 +1,118 @@
+* {
+    font-weight: bold;
+}
+
+.search-container {
+    background-color: #b4b4b4;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 150px;
+}
+
+.search-container>h2 {
+    padding: 50px 0;
+    color: #333;
+}
+
+.search-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    grid-column-gap: 10px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.search-slide {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+.search-slide>span {
+    position: relative;
+    top: 25px;
+    left: 5px;
+    z-index: 2;
+}
+
+.search-slide>span {
+    position: relative;
+    top: 30px;
+    left: 0;
+    border-radius: 0 5px 5px 0;
+    padding: 2px;
+    z-index: 2;
+    background: #333;
+    opacity: .75;
+}
+
+.search-slide>h4 {
+    padding-top: 10px;
+}
+
+.search-figure {
+    position: relative;
+    backface-visibility: hidden;
+    height: 200px;
+    width: 130px;
+}
+
+.search-figure::before {
+    content: '';
+    display: block;
+    width: 130px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, #333333, #393939, #939393, #c5c5c5, #f9f9f9);
+    opacity: .5;
+    border-radius: 5px;
+}
+
+.search-figure>img {
+    height: 200px;
+    width: 130px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 23px 2px rgba(0, 0, 0, 0.75);
+}
+
+.search-results-pagination {
+    width: 100%;
+    height: 150px;
+    background: transparent;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.search-results-pagination button {
+    width: 100px;
+    margin: 0 10px;
+    border-radius: 10px;
+    background: #333;
+    color: #f4f4f4;
+}
+
+@media only screen and (max-width: 1023px) {
+    .search-wrapper {
+        grid-template-columns: repeat(3, 150px);
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .search-wrapper {
+        grid-template-columns: repeat(2, 150px);
+        width: 100%;
+        padding: 10px;
+    }
+}

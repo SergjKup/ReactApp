@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.itemcarousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.itemcarousel-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 93vh;
+}
+
+.itemcarousel-slide {
+    width: 100%;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+.itemcarousel-figure {
+    position: relative;
+    backface-visibility: hidden;
+    height: 93vh;
+    width: 100%;
+}
+
+.itemcarousel-figure::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, #333333, #393939, #939393, #c5c5c5, #f9f9f9);
+    opacity: .5;
+}
+
+.itemcarousel-figure>img {
+    background-position: center top no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 93vh;
+}
+
+.itemcarousel-info {
+    color: white;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+.itemcarousel-info>p {
+    text-transform: uppercase;
+}
+
+.itemcarousel-info>h2 {
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 1325px) {
+    .itemcarousel-wrapper {
+        height: 60vh;
+    }
+    .itemcarousel-figure {
+        height: 60vh;
+    }
+    .itemcarousel-figure::before {
+        height: 60vh;
+    }
+    .itemcarousel-figure>img {
+        height: 60vh;
+    }
+}
+
+@media only screen and (max-width: 867px) {
+    .itemcarousel-wrapper {
+        height: 40vh;
+    }
+    .itemcarousel-figure {
+        height: 40vh;
+    }
+    .itemcarousel-figure::before {
+        height: 40vh;
+    }
+    .itemcarousel-figure>img {
+        height: 40vh;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    .itemcarousel-wrapper {
+        height: 33vh;
+    }
+    .itemcarousel-figure {
+        height: 33vh;
+    }
+    .itemcarousel-figure::before {
+        height: 33vh;
+    }
+    .itemcarousel-figure>img {
+        height: 33vh;
+    }
+}
