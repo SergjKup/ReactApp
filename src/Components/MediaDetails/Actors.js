@@ -21,6 +21,7 @@ const Actors  = (props) => {
       },
     });
   })();
+  console.dir(actors)
   return (
     <section>
       <h1>В ролях:</h1>
@@ -33,7 +34,7 @@ const Actors  = (props) => {
                 <div key={cur.id} className="swiper-slide actors-slide">
                   <img
                     src={
-                      actors && config
+                      actors && config && cur.profile_path
                         ? config.secure_base_url +
                           config.profile_sizes[1] +
                           cur.profile_path
@@ -44,7 +45,7 @@ const Actors  = (props) => {
                   <h4>{cur.name}</h4>
                 </div>
               ))
-            : ""}
+            : "Данные об актерах не найдены..."}
         </div>
       </div>
     </section>
